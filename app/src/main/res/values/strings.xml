@@ -8,5 +8,9 @@
     <string name="menu_my_appointment">My Appointment</string>
     <string name="menu_profile_title">Profile</string>
 
+    //landing page
+    <string name="login_text_one">Hospital Management System</string>
+    <string name="sign_in">sign_in</string>
+
 
 </resources>
