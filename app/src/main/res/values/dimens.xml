@@ -4,5 +4,29 @@
     //padding
     <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_bottom_74">74dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+
+    //margin
+    <dimen name="layout_width">0dp</dimen>
+    <dimen name="layout_height">0dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="height_8">8dp</dimen>
+    <dimen name="width_8">8dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="card_radius_20">20dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_left_86">86dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="view_height_56">56dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_88">88dp</dimen>
+    <dimen name="margin_36">36dp</dimen>
+
+    //text size
+    <dimen name="text_size_30">30sp</dimen>
+    <string name="login_text">Hospital Managing System</string>
+    <dimen name="text_size_17">17sp</dimen>
 
 </resources>
