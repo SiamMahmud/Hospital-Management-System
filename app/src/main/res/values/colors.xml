@@ -13,5 +13,9 @@
     <color name="colorPrimary">#FFFF5949</color>
     <color name="slidePage">#FADFDC</color>
     <color name="browse_button">#EDF1F7</color>
+    <color name="background">#F7F9FC</color>
+    <color name="page_title_text_color">#222B45</color>
+    <color name="hint_text_color">#82888A</color>
+    <color name="signIn_btn_color">#0095FF</color>
 
 </resources>
