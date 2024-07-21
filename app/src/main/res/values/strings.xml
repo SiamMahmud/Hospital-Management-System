@@ -32,5 +32,9 @@
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="create_button_text">Continue</string>
 
+    //forget password page
+    <string name="recover">Please enter your Email so we can help you recover your password.</string>
+    <string name="next">Next</string>
+
 
 </resources>
