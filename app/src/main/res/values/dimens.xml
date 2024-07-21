@@ -11,6 +11,7 @@
     <dimen name="padding_14">14dp</dimen>
     <dimen name="padding_7">7dp</dimen>
     <dimen name="button_padding">14dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
 
     //margin
     <dimen name="layout_width">0dp</dimen>
@@ -39,6 +40,8 @@
     <dimen name="margin_22">22dp</dimen>
     <dimen name="button_top_margin">35dp</dimen>
     <dimen name="button_bottom_margin">20dp</dimen>
+    <dimen name="margin_29">29dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
 
 
 

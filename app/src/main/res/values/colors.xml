@@ -17,5 +17,6 @@
     <color name="page_title_text_color">#222B45</color>
     <color name="hint_text_color">#82888A</color>
     <color name="signIn_btn_color">#0095FF</color>
+    <color name="red_500_shadow">#FFCDC8</color>
 
 </resources>
