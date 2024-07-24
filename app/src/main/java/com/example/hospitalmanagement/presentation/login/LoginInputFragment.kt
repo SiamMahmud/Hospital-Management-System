@@ -27,8 +27,6 @@ class LoginInputFragment : Fragment() {
 
         binding.loginErrorTv.visibility = View.INVISIBLE
 
-
-
         return binding.root
     }
 }
