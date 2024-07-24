@@ -1,5 +1,4 @@
 package com.example.hospitalmanagement.presentation.login
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,9 +10,15 @@ import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.databinding.FragmentLoginLandingBinding
+import com.example.hospitalmanagement.presentation.util.HMSActivityUtil
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LoginLandingFragment : Fragment() {
 
+@Inject
+lateinit var activityUtil : HMSActivityUtil
     val actionLogin =
         Navigation.createNavigateOnClickListener(R.id.action_loginLandingFragment_to_loginInputFragment)
     val actionSignUp =
@@ -29,7 +34,7 @@ class LoginLandingFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_login_landing, container, false)
         binding.model = this
-
+        activityUtil.hideBottomNavigation(true)
         val pageOne = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_one, null)
         val pageTwo = LayoutInflater.from(activity).inflate(R.layout.login_slider_page_two, null)
         val pageThree =
