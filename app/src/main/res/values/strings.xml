@@ -36,5 +36,15 @@
     <string name="recover">Please enter your Email so we can help you recover your password.</string>
     <string name="next">Next</string>
 
+    //dash board page
+    <string name="appointment">Appointment</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="blood_bank">Blood Bank </string>
+    <string name="doctor_list">Doctor list</string>
+    <string name="medicine_store">Medicine store</string>
+    <string name="prescription">Prescription</string>
+
+
+
 
 </resources>
