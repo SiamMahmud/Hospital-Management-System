@@ -1,12 +1,10 @@
 package com.example.hospitalmanagement.presentation
-
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.inputmethod.InputMethodManager
 import androidx.annotation.RequiresApi
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -25,6 +23,7 @@ class MainActivity : AppCompatActivity(), HMSActivityUtil.ActivityListener {
     private lateinit var navController: NavController
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var binding: ActivityMainBinding
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +45,15 @@ class MainActivity : AppCompatActivity(), HMSActivityUtil.ActivityListener {
             }
         }
         navController = navHostFragment.navController
+
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> navHostFragment.findNavController().navigate(R.id.homeFragment)
+                R.id.myAppointment -> {}
+                R.id.profile -> navHostFragment.findNavController().navigate(R.id.profileFragment)
+            }
+            true
+        }
 
     }
 
