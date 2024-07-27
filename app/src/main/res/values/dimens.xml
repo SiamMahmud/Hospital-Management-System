@@ -15,13 +15,10 @@
     <dimen name="padding_20">20dp</dimen>
 
     //margin
-    <dimen name="layout_width">0dp</dimen>
-    <dimen name="layout_height">0dp</dimen>
     <dimen name="margin_60">60dp</dimen>
     <dimen name="height_8">8dp</dimen>
     <dimen name="width_8">8dp</dimen>
     <dimen name="margin_8">8dp</dimen>
-    <dimen name="card_radius_20">20dp</dimen>
     <dimen name="margin_30">30dp</dimen>
     <dimen name="margin_left_86">86dp</dimen>
     <dimen name="margin_10">10dp</dimen>
@@ -46,7 +43,6 @@
     <dimen name="height_117">117dp</dimen>
     <dimen name="margin_11">11dp</dimen>
     <dimen name="margin_top_12">12dp</dimen>
-    <dimen name="corner_radius_10">10dp</dimen>
     <dimen name="width_40">40dp</dimen>
     <dimen name="height_40">40dp</dimen>
     <dimen name="margin_left_13">13dp</dimen>
@@ -60,7 +56,19 @@
     <dimen name="margin_3">3dp</dimen>
     <dimen name="margin_70">70dp</dimen>
     <dimen name="margin_26">26dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
 
+
+    //layout
+    <dimen name="layout_width">0dp</dimen>
+    <dimen name="layout_height">0dp</dimen>
+    <dimen name="layout_80">80dp</dimen>
+    <dimen name="layout_315">315dp</dimen>
+
+    //radius
+    <dimen name="radius_8">8dp</dimen>
+    <dimen name="card_radius_20">20dp</dimen>
+    <dimen name="corner_radius_10">10dp</dimen>
 
 
 

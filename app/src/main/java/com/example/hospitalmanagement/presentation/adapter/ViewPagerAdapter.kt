@@ -1,10 +1,9 @@
-package com.example.hospitalmanagement.presentation.login
+package com.example.hospitalmanagement.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.widget.ListView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hospitalmanagement.R
 
