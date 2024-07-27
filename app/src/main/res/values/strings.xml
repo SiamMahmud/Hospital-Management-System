@@ -63,6 +63,16 @@
     <string name="addDoctor">Add</string>
     <string name="doctorList">Doctor List</string>
 
+    //add doctor page
+    <string name="add_doctor">Add Doctor</string>
+    <string name="doctor_name">name</string>
+    <string name="doctor_specialization">Doctor Specialization</string>
+    <string name="doctor_degree">Degree</string>
+    <string name="doctor_studyInstuition">Doctor Study Instuition</string>
+    <string name="doctor">Doctor Study Instuition</string>
+    <string name="doctorEmail">Email</string>
+    <string name="doctorPhoneNumber">Phone Number</string>
+    <string name="btnSave">Save</string>
 
 
 </resources>

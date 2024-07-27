@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.hospitalmanagement.presentation.dashboard.AdminAddDoctorFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_22"
+                android:background="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_22"
+                android:layout_marginRight="@dimen/margin_30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backIv">
+
+                <TextView
+                    android:id="@+id/titleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_doctor"
+                    android:textColor="@color/page_title_text_color"
+                    android:textSize="@dimen/title_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/rounded_editetext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleTv"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dNameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/doctor_name"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_15"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/doctorEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/rounded_editetext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dName"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/doctorEmailEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/doctorEmail"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/padding_15"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/doctorPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/rounded_editetext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doctorEmail"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/doctorPhoneNumberEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/doctorPhoneNumber"
+                        android:inputType="number"
+                        android:padding="@dimen/padding_15"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dSpecialization"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/rounded_editetext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doctorPhoneNumber"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dSpecializationEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/doctor_specialization"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_15"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/doctorDegree"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/rounded_editetext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dSpecialization"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/doctorDegreeEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/doctor_degree"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_15"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/doctorInstuition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/rounded_editetext_bg"
+                    android:textColorHint="@color/hint_text_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doctorDegree"
+                    app:passwordToggleTint="@color/hint_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/doctorInstuitionEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/doctor_studyInstuition"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_15"
+                        android:paddingLeft="@dimen/padding_14"
+                        android:textColor="@color/page_title_text_color"
+                        android:textSize="@dimen/text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btnSave"
+                    style="@style/Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_50"
+                    android:layout_marginBottom="@dimen/button_bottom_margin"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/button_padding"
+                    android:text="@string/btnSave"
+                    android:textSize="@dimen/text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doctorInstuition"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
