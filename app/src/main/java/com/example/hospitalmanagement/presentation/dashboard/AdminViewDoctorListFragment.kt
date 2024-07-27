@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.databinding.FragmentAdminViewDoctorListBinding
@@ -16,6 +17,8 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class AdminViewDoctorListFragment : Fragment() {
+    val actionAddDoctorList =
+        Navigation.createNavigateOnClickListener(R.id.action_adminViewDoctorListFragment_to_adminAddDoctorFragment)
     @Inject
     lateinit var activityUtil: HMSActivityUtil
     private lateinit var binding: FragmentAdminViewDoctorListBinding

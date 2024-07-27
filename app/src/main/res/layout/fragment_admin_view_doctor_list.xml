@@ -38,6 +38,7 @@
             android:id="@+id/saveTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{model.actionAddDoctorList}"
             android:text="@string/addDoctor"
             android:textColor="@color/red_500"
             android:textSize="@dimen/text_size"
