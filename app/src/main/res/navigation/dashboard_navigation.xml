@@ -9,10 +9,19 @@
         android:id="@+id/homeFragment"
         android:name="com.example.hospitalmanagement.presentation.dashboard.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_adminViewDoctorListFragment"
+            app:destination="@id/adminViewDoctorListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.hospitalmanagement.presentation.dashboard.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/adminViewDoctorListFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.AdminViewDoctorListFragment"
+        android:label="fragment_admin_view_doctor_list"
+        tools:layout="@layout/fragment_admin_view_doctor_list" />
 </navigation>

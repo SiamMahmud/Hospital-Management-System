@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.databinding.FragmentHomeBinding
 import com.example.hospitalmanagement.presentation.util.HMSActivityUtil
@@ -13,10 +14,13 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
-    private lateinit var binding: FragmentHomeBinding
 
+    val actionDoctorList =
+        Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_adminViewDoctorListFragment)
     @Inject
     lateinit var activityUtil: HMSActivityUtil
+    private lateinit var binding: FragmentHomeBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

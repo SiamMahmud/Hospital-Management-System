@@ -10,6 +10,7 @@ import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.databinding.FragmentLoginLandingBinding
+import com.example.hospitalmanagement.presentation.adapter.ViewPagerAdapter
 import com.example.hospitalmanagement.presentation.util.HMSActivityUtil
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
