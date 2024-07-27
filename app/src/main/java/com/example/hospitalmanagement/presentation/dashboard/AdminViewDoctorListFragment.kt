@@ -1,4 +1,5 @@
 package com.example.hospitalmanagement.presentation.dashboard
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -6,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.databinding.FragmentAdminViewDoctorListBinding
@@ -19,6 +21,7 @@ import javax.inject.Inject
 class AdminViewDoctorListFragment : Fragment() {
     val actionAddDoctorList =
         Navigation.createNavigateOnClickListener(R.id.action_adminViewDoctorListFragment_to_adminAddDoctorFragment)
+
     @Inject
     lateinit var activityUtil: HMSActivityUtil
     private lateinit var binding: FragmentAdminViewDoctorListBinding
@@ -30,26 +33,23 @@ class AdminViewDoctorListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_admin_view_doctor_list,
-            container,
-            false
-        )
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_admin_view_doctor_list, container, false)
         binding.model = this
+        binding.backIv.setOnClickListener {
+            findNavController().popBackStack()
+        }
         activityUtil.hideBottomNavigation(true)
-
         binding.doctorListRecycle.layoutManager = LinearLayoutManager(activity)
-
-        arr = arrayOf(
-            "Siam, Medicine",
-            "Ashraful, Physiology"
-        )
-
+        arr = arrayOf("Siam, Medicine", "Ashraful, Physiology")
         doctorArray = arrayListOf()
         adapter = AdminViewDoctorListAdapter(doctorArray)
         binding.doctorListRecycle.adapter = adapter
-
+        adapter.onItemClick = {
+            val bundle = Bundle()
+            bundle.putString("name", it.name)
+            bundle.putString("specialty", it.specialty)
+            findNavController().navigate(R.id.action_adminViewDoctorListFragment_to_adminViewDoctorDetailsFragment, bundle)
+        }
         getUserdata()
 
         return binding.root

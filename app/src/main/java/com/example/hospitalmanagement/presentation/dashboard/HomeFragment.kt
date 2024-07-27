@@ -15,8 +15,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
-    val actionDoctorList =
-        Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_adminViewDoctorListFragment)
+    val actionDoctorList = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_adminViewDoctorListFragment)
     @Inject
     lateinit var activityUtil: HMSActivityUtil
     private lateinit var binding: FragmentHomeBinding

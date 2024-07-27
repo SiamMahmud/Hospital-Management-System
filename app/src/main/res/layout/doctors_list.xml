@@ -16,7 +16,7 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/profileCv"
+            android:id="@+id/profileCvView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="@dimen/margin_10"
@@ -37,7 +37,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/margin_10"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/profileCv"
+            app:layout_constraintStart_toEndOf="@id/profileCvView"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView

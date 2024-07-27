@@ -27,9 +27,27 @@
         <action
             android:id="@+id/action_adminViewDoctorListFragment_to_adminAddDoctorFragment"
             app:destination="@id/adminAddDoctorFragment" />
+        <action
+            android:id="@+id/action_adminViewDoctorListFragment_to_adminViewDoctorDetailsFragment"
+            app:destination="@id/adminViewDoctorDetailsFragment" />
+        <action
+            android:id="@+id/action_adminViewDoctorListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/adminAddDoctorFragment"
         android:name="com.example.hospitalmanagement.presentation.dashboard.AdminAddDoctorFragment"
-        android:label="AdminAddDoctorFragment" />
+        android:label="AdminAddDoctorFragment" >
+        <action
+            android:id="@+id/action_adminAddDoctorFragment_to_adminViewDoctorListFragment"
+            app:destination="@id/adminViewDoctorListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminViewDoctorDetailsFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.AdminViewDoctorDetailsFragment"
+        android:label="AdminViewDoctorDetailsFragment" >
+        <action
+            android:id="@+id/action_adminViewDoctorDetailsFragment_to_adminViewDoctorListFragment"
+            app:destination="@id/adminViewDoctorListFragment" />
+    </fragment>
 </navigation>

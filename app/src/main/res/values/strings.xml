@@ -74,5 +74,24 @@
     <string name="doctorPhoneNumber">Phone Number</string>
     <string name="btnSave">Save</string>
 
+    //Doctor Details
+    <string name="about_details">About Doctor</string>
+    <string name="name">Name:</string>
+    <string name="doctor_name_details">name</string>
+    <string name="doctorEmailsDetails">Email:</string>
+    <string name="doctorEmailsDetailsEt">email</string>
+    <string name="doctorPhnDetails">Phone :</string>
+    <string name="doctorPhnDetailsEt">phone number</string>
+    <string name="doctorSpecialDetails">Specialization :</string>
+    <string name="doctorSpecialDetailsEt">specialization </string>
+    <string name="doctorDegreeDetails">Degree :</string>
+    <string name="doctorDegreeDetailsEt">degree</string>
+    <string name="doctorStudyInstuitionDetails">University : </string>
+    <string name="doctorStudyInstuitionDetailsEt">university name</string>
+    <string name="btnDoctorDetails">Delete</string>
+
+
+
+
 
 </resources>
