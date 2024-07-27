@@ -8,28 +8,24 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.hospitalmanagement.R
-import com.example.hospitalmanagement.databinding.FragmentAdminAddDoctorBinding
+import com.example.hospitalmanagement.databinding.FragmentAdminViewDoctorDetailsBinding
 import com.example.hospitalmanagement.databinding.FragmentAdminViewDoctorListBinding
-import com.example.hospitalmanagement.presentation.model.DoctorInfo
-import com.example.hospitalmanagement.presentation.util.HMSActivityUtil
-import javax.inject.Inject
 
+class AdminViewDoctorDetailsFragment : Fragment() {
 
-class AdminAddDoctorFragment : Fragment() {
-    private lateinit var binding: FragmentAdminAddDoctorBinding
+    private lateinit var binding: FragmentAdminViewDoctorDetailsBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_admin_add_doctor, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_admin_view_doctor_details, container, false)
         binding.model = this
         binding.backIv.setOnClickListener {
             findNavController().popBackStack()
         }
+        binding.nameTv.text = requireArguments().getString("name")
+        binding.doctorSpecializationTv.text = requireArguments().getString("specialty")
         return binding.root
     }
-
-
 }
-
-
