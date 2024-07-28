@@ -90,6 +90,14 @@
     <string name="doctorStudyInstuitionDetailsEt">university name</string>
     <string name="btnDoctorDetails">Delete</string>
 
+    //Ambulance Page
+    <string name="driver_name">Driver Name : </string>
+    <string name="driver_name_tv">name </string>
+    <string name="ambulance_licence_number">Licence Number : </string>
+    <string name="ambulance_licence_number_tv">number </string>
+    <string name="ambulance_title">Ambulance List</string>
+    <string name="ambulance_location">Location: </string>
+    <string name="ambulance_locationTv">location name</string>
 
 
 

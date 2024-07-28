@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_adminViewDoctorListFragment"
             app:destination="@id/adminViewDoctorListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ambulanceFragment"
+            app:destination="@id/ambulanceFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -49,5 +52,14 @@
         <action
             android:id="@+id/action_adminViewDoctorDetailsFragment_to_adminViewDoctorListFragment"
             app:destination="@id/adminViewDoctorListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ambulanceFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.AmbulanceFragment"
+        android:label="fragment_ambulance"
+        tools:layout="@layout/fragment_ambulance" >
+        <action
+            android:id="@+id/action_ambulanceFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
