@@ -58,6 +58,8 @@
     <dimen name="margin_26">26dp</dimen>
     <dimen name="margin_2">2dp</dimen>
     <dimen name="margin_top_230">230dp</dimen>
+    <dimen name="margin_top_250">250dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
 
 
 

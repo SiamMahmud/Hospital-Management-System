@@ -98,8 +98,13 @@
     <string name="ambulance_title">Ambulance List</string>
     <string name="ambulance_location">Location: </string>
     <string name="ambulance_locationTv">location name</string>
+    <string name="add_ambulance">Add</string>
 
-
+    //Add Ambulance Page
+    <string name="add_ambulance_title">Add Ambulance</string>
+    <string name="ambulance_driver_name">driver name</string>
+    <string name="ambulance_location_name">ambulance location</string>
+    <string name="ambulance_plate_number">car number plate</string>
 
 
 </resources>
