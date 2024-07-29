@@ -106,5 +106,9 @@
     <string name="ambulance_location_name">ambulance location</string>
     <string name="ambulance_plate_number">car number plate</string>
 
+    //Ambulance Details Page
+    <string name="ambulance_details">About Ambulance</string>
+    <string name="ambulance_details_driver_nameTv">name</string>
+
 
 </resources>

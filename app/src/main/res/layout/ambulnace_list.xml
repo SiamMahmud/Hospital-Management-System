@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/layout_80"
-    android:id="@+id/ambulanceCard"
+    android:id="@+id/ambulanceCardLayout"
     android:layout_marginStart="@dimen/margin_3"
     android:layout_marginTop="@dimen/margin_3"
     android:layout_marginEnd="@dimen/margin_2"
@@ -73,11 +73,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/driverName"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ambulanceContainer2"
@@ -103,7 +99,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/ambulanceLocationTv"
+                android:id="@+id/ambulLocationTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_5"

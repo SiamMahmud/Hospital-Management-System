@@ -39,6 +39,13 @@ class AmbulanceFragment : Fragment() {
         ambulanceArray = arrayListOf()
         adapter = AmbulanceListAdapter(ambulanceArray)
         binding.ambulanceListRecycle.adapter = adapter
+        adapter.onItemClick = {
+            val bundle = Bundle()
+            bundle.putString("driverName", it.driverName)
+            bundle.putString("ambulLocation", it.ambulLocation)
+            findNavController().navigate(R.id.action_ambulanceFragment_to_ambulanceDetailsFragment, bundle)
+        }
+
         binding.backIv.setOnClickListener {
             findNavController().popBackStack()
         }
