@@ -64,6 +64,9 @@
         <action
             android:id="@+id/action_ambulanceFragment_to_adminAddAmbulanceFragment"
             app:destination="@id/adminAddAmbulanceFragment" />
+        <action
+            android:id="@+id/action_ambulanceFragment_to_ambulanceDetailsFragment"
+            app:destination="@id/ambulanceDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/adminAddAmbulanceFragment"
@@ -72,6 +75,14 @@
         tools:layout="@layout/fragment_admin_add_ambulance" >
         <action
             android:id="@+id/action_adminAddAmbulanceFragment_to_ambulanceFragment"
+            app:destination="@id/ambulanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ambulanceDetailsFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.AmbulanceDetailsFragment"
+        android:label="AmbulanceDetailsFragment" >
+        <action
+            android:id="@+id/action_ambulanceDetailsFragment_to_ambulanceFragment"
             app:destination="@id/ambulanceFragment" />
     </fragment>
 </navigation>
