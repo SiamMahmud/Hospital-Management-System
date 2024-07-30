@@ -127,6 +127,16 @@
     <string name="row">Row :</string>
     <string name="column">Column :</string>
 
+    //Medicine Details
+    <string name="about_medicine">About Medicine</string>
+    <string name="medicine_name">Medicine name:</string>
+    <string name="company_name">Company name:</string>
+    <string name="medicine_price">Medicine Price</string>
+    <string name="expire_medicine">Expire Medicine</string>
+    <string name="self_no">Self no</string>
+    <string name="row_no">Row no</string>
+    <string name="column_no">Column no</string>
+    <string name="medicine_details">Medicine details</string>
 
 
 </resources>

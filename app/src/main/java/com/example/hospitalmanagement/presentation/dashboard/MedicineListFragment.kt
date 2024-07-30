@@ -39,6 +39,12 @@ class MedicineListFragment : Fragment() {
         medicineArray = arrayListOf()
         adapter = AdminViewMedicineListAdapter(medicineArray)
         binding.medicineListRecycle.adapter = adapter
+        adapter.onItemClick = {
+            val bundle = Bundle()
+            bundle.putString("mediName", it.mediName)
+            bundle.putString("mediPrice", it.mediPrice)
+            findNavController().navigate(R.id.action_medicineListFragment_to_medicineDetailsFragment, bundle)
+        }
         activityUtil.hideBottomNavigation(true)
         binding.backIv.setOnClickListener {
             findNavController().popBackStack()
