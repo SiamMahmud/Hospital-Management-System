@@ -117,6 +117,16 @@
     <string name="mPrice">Price : </string>
     <string name="mPriceP">price</string>
 
+    //Add Medicine
+    <string name="add_medicine">Add Medicine</string>
+    <string name="company">Company :</string>
+    <string name="details">Details :</string>
+    <string name="price">Price :</string>
+    <string name="expire_date">Expire Date :</string>
+    <string name="self">Self :</string>
+    <string name="row">Row :</string>
+    <string name="column">Column :</string>
+
 
 
 </resources>
