@@ -17,6 +17,7 @@ class HomeFragment : Fragment() {
 
     val actionDoctorList = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_adminViewDoctorListFragment)
     val actionAmbulanceList = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_ambulanceFragment)
+    val actionMedicineList = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_medicineListFragment)
     @Inject
     lateinit var activityUtil: HMSActivityUtil
     private lateinit var binding: FragmentHomeBinding
