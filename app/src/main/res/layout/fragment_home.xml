@@ -131,6 +131,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/expenseCv"
                 android:layout_width="wrap_content"
+                android:onClick="@{model.actionMedicineList}"
                 android:layout_height="@dimen/height_117"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"

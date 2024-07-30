@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_ambulanceFragment"
             app:destination="@id/ambulanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_medicineListFragment"
+            app:destination="@id/medicineListFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -84,5 +87,14 @@
         <action
             android:id="@+id/action_ambulanceDetailsFragment_to_ambulanceFragment"
             app:destination="@id/ambulanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineListFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.MedicineListFragment"
+        android:label="fragment_medicine_list"
+        tools:layout="@layout/fragment_medicine" >
+        <action
+            android:id="@+id/action_medicineListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
