@@ -208,6 +208,7 @@
                 android:layout_height="@dimen/height_117"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
+                android:onClick="@{model.actionBloodBank}"
                 android:layout_marginLeft="@dimen/margin_left_13"
                 android:layout_marginTop="@dimen/margin_top_12"
                 android:layout_marginRight="@dimen/margin_11"
