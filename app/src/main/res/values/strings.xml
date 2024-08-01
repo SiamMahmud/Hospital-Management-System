@@ -138,5 +138,19 @@
     <string name="column_no">Column no</string>
     <string name="medicine_details">Medicine details</string>
 
+    //Blood Bank
+    <string name="blood_bank_list">Blood Bank List</string>
+    <string name="donor_name">Donor Name : </string>
+    <string name="group">Group : </string>
+    <string name="group_name">name </string>
+    <string name="add_bloodBank"> Add Blood Bank </string>
+    <string name="donor_nameEt"> donor name </string>
+    <string name="donor_blood_group"> blood group type </string>
+    <string name="contact_number">contact number</string>
+    <string name="about_blood_bank">About Blood Bank</string>
+    <string name="phone">Phone</string>
+
+
+
 
 </resources>
