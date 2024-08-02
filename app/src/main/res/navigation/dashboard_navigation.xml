@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_homeFragment_to_admibBloodFragment"
             app:destination="@id/admibBloodFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_prescriptionViewFragment"
+            app:destination="@id/prescriptionViewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -105,6 +111,7 @@
         <action
             android:id="@+id/action_medicineListFragment_to_medicineDetailsFragment"
             app:destination="@id/medicineDetailsFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/addMedicineFragment"
@@ -156,5 +163,36 @@
         <action
             android:id="@+id/action_adminBloodBankDetailsFragment_to_admibBloodFragment"
             app:destination="@id/admibBloodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionViewFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.PrescriptionViewFragment"
+        android:label="fragment_prescription_view"
+        tools:layout="@layout/fragment_prescription_view" >
+
+        <action
+            android:id="@+id/action_prescriptionViewFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_prescriptionViewFragment_to_prescriptionDetailsFragment"
+            app:destination="@id/prescriptionDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionDetailsFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.PrescriptionDetailsFragment"
+        android:label="fragment_prescription_details"
+        tools:layout="@layout/fragment_prescription_details" >
+        <action
+            android:id="@+id/action_prescriptionDetailsFragment_to_prescriptionViewFragment"
+            app:destination="@id/prescriptionViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.hospitalmanagement.presentation.dashboard.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" >
+        <action
+            android:id="@+id/action_appointmentFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

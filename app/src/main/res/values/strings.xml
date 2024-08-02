@@ -150,7 +150,16 @@
     <string name="about_blood_bank">About Blood Bank</string>
     <string name="phone">Phone</string>
 
+    //Prescription Page
+    <string name="patient_name">Patient Name : </string>
+    <string name="doctor_nameTv">Doctor Name : </string>
+    <string name="prescribe">Prescription</string>
 
+
+
+    //Appointment Page
+    <string name="appointment_date">Appointment Date : </string>
+    <string name="date">date</string>
 
 
 </resources>
