@@ -26,10 +26,8 @@ class LoginInputFragment : Fragment() {
 
     @Inject
     lateinit var sharedPrefs: SharePreferenceUtil
-    val actionForgot =
-        Navigation.createNavigateOnClickListener(R.id.action_loginInputFragment_to_loginForgetPasswordFragment)
-    val actionSignUp =
-        Navigation.createNavigateOnClickListener(R.id.action_loginInputFragment_to_loginCreateFragment)
+    val actionForgot = Navigation.createNavigateOnClickListener(R.id.action_loginInputFragment_to_loginForgetPasswordFragment)
+    val actionSignUp = Navigation.createNavigateOnClickListener(R.id.action_loginInputFragment_to_loginCreateFragment)
 
     private lateinit var binding : FragmentLoginInputBinding
 
