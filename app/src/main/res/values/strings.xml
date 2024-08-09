@@ -31,6 +31,12 @@
     <string name="hint_dob">Date of Birth</string>
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="create_button_text">Continue</string>
+    <string name="error_name">name can not be empty</string>
+    <string name="error_email">Invalid email</string>
+    <string name="error_number">Must be more then 11 letter</string>
+    <string name="error_address">Must write your address</string>
+    <string name="error_dob">Write your birth date</string>
+    <string name="auth_massage">Authentication Successful</string>
 
     //forget password page
     <string name="recover">Please enter your Email so we can help you recover your password.</string>
