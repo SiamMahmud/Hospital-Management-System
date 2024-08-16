@@ -25,6 +25,7 @@ class AdminBloodBankDetailsFragment : Fragment() {
         }
         binding.donorN.text = requireArguments().getString("donorName")
         binding.aGroupTypeEt.text = requireArguments().getString("bloodGroupType")
+        binding.donorPhnNumEt.text = requireArguments().getString("donorPhoneNumber")
 
         return binding.root
     }

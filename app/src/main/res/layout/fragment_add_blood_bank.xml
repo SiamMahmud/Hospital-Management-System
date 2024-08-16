@@ -88,7 +88,7 @@
                 app:passwordToggleTint="@color/hint_text_color">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/blddGroupTv"
+                    android:id="@+id/bloodGroupTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
@@ -126,7 +126,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/addBloodBtnSave"
+                android:id="@+id/addBldBtnSave"
                 style="@style/Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

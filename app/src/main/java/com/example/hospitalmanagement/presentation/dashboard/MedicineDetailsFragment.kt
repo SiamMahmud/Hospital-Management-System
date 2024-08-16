@@ -19,11 +19,18 @@ class MedicineDetailsFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_medicine_details, container, false)
         binding.model = this
-        binding.nameTv.text = requireArguments().getString("mediName")
-        binding.priceTv.text = requireArguments().getString("mediPrice")
         binding.backIv.setOnClickListener {
             findNavController().popBackStack()
         }
+        binding.nameTv.text = requireArguments().getString("name")
+        binding.companyTv.text = requireArguments().getString("company")
+        binding.priceTv.text = requireArguments().getString("price")
+        binding.dateTv.text = requireArguments().getString("date")
+        binding.selfTv.text = requireArguments().getString("self")
+        binding.rowTv.text = requireArguments().getString("row")
+        binding.columnTv.text = requireArguments().getString("column")
+        binding.detailsTv.text = requireArguments().getString("details")
+
         return binding.root
     }
 
