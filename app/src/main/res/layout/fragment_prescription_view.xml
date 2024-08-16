@@ -6,8 +6,9 @@
     <data>
         <variable
             name="model"
-            type="com.example.hospitalmanagement.presentation.dashboard.AdminBloodFragment"/>
+            type="com.example.hospitalmanagement.presentation.dashboard.PrescriptionViewFragment" />
     </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,7 +26,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <ImageView
             android:id="@+id/backIv"
             android:layout_width="wrap_content"
@@ -33,17 +33,6 @@
             android:background="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <TextView
-            android:id="@+id/addBloodTv"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/margin_18"
-            android:text="@string/add_ambulance"
-            android:onClick="@{model.actionAddBloodList}"
-            android:textColor="@color/red_500"
-            android:textSize="@dimen/text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -59,15 +48,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/blood_bank_list"
+            android:text="@string/prescription"
             android:textColor="@color/page_title_text_color"
             android:textSize="@dimen/title_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <SearchView
-            android:id="@+id/searchBlood"
+            android:id="@+id/searchPatientName"
             android:layout_width="@dimen/layout_315"
             android:layout_height="@dimen/height_40"
             android:layout_centerHorizontal="true"
@@ -83,14 +71,17 @@
             android:layout_marginTop="@dimen/margin_15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchBlood">
+            app:layout_constraintTop_toBottomOf="@id/searchPatientName">
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/bloodBankListRecycle"
+                android:id="@+id/prescribeListRecycle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/margin_8"
-                tools:listitem="@layout/blood_list" />
+                tools:listitem="@layout/prescription_list" />
+
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

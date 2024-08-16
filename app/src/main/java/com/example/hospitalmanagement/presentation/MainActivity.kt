@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -68,6 +69,16 @@ class MainActivity : AppCompatActivity(), HMSActivityUtil.ActivityListener {
             binding.bottomNavigationView.visibility = View.GONE
         } else {
             binding.bottomNavigationView.visibility = View.VISIBLE
+        }
+    }
+
+    override fun setFullScreenLoading(short: Boolean) {
+        if (short) {
+            binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+            binding.fullscreenLoading.visibility = View.VISIBLE
+        } else {
+            binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+            binding.fullscreenLoading.visibility = View.GONE
         }
     }
 }

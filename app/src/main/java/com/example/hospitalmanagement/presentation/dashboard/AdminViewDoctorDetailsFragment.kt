@@ -25,7 +25,12 @@ class AdminViewDoctorDetailsFragment : Fragment() {
             findNavController().popBackStack()
         }
         binding.nameTv.text = requireArguments().getString("name")
-        binding.doctorSpecializationTv.text = requireArguments().getString("specialty")
+        binding.doctorEmailsDetailsTv.text = requireArguments().getString("email")
+        binding.doctorPhnDetailsTv.text = requireArguments().getString("phoneNumber")
+        binding.doctorSpecializationTv.text = requireArguments().getString("doctorSpecialization")
+        binding.doctorDegreeDetailsTv.text = requireArguments().getString("doctorDegree")
+        binding.doctorStudyInstuitionDetailsTv.text = requireArguments().getString("doctorInstuition")
+
         return binding.root
     }
 }

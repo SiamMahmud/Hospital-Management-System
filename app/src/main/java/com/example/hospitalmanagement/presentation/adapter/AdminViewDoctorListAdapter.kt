@@ -8,8 +8,9 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.presentation.model.DoctorInfo
+import com.example.hospitalmanagement.presentation.model.MedicineInfo
 
-class AdminViewDoctorListAdapter(private val doctorList: ArrayList<DoctorInfo>) :
+class AdminViewDoctorListAdapter(private var doctorList: ArrayList<DoctorInfo>) :
     RecyclerView.Adapter<AdminViewDoctorListAdapter.MyViewHolder>() {
     var onItemClick: ((DoctorInfo) -> Unit)? = null
 
@@ -22,21 +23,43 @@ class AdminViewDoctorListAdapter(private val doctorList: ArrayList<DoctorInfo>) 
         return doctorList.size
     }
 
+    fun searchDataList(searchList: List<DoctorInfo>) {
+        doctorList = ArrayList(searchList)
+        notifyDataSetChanged()
+    }
+    
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = doctorList[position]
+
+        holder.bind(currentItem)
+        holder.card.setOnClickListener {
+            onItemClick?.invoke(currentItem)
+        }
+
         holder.dName.text = currentItem.name
-        holder.dDegree.text = currentItem.specialty
+        holder.dDegree.text = currentItem.email
         holder.card.setOnClickListener {
             onItemClick?.invoke(currentItem)
         }
     }
 
-
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val dName: TextView
+        val dDegree: TextView
+        val card: CardView
 
-        val dName = itemView.findViewById<TextView>(R.id.cardDocName)
-        val dDegree = itemView.findViewById<TextView>(R.id.cardDocSpecial)
-        val card = itemView.findViewById<CardView>(R.id.docCard)
+        init {
+            dName = itemView.findViewById(R.id.cardDocName)
+            dDegree = itemView.findViewById(R.id.cardDocSpecial)
+            card = itemView.findViewById(R.id.docCard)
+        }
+
+        fun bind(medicine: DoctorInfo) {
+            dName.text = medicine.name
+            dDegree.text = medicine.doctorSpecialization
+        }
+
+
     }
 
 }

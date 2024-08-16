@@ -5,8 +5,13 @@ class HMSActivityUtil(private val activityListener:ActivityListener) {
         activityListener.hideBottomNavigation(hide)
     }
 
+    fun setFullScreenLoading(short: Boolean){
+        activityListener.setFullScreenLoading(short)
+    }
+
 
     interface ActivityListener{
         fun hideBottomNavigation(hide:Boolean)
+        fun setFullScreenLoading(short:Boolean)
     }
 }

@@ -19,8 +19,8 @@ class HomeFragment : Fragment() {
     val actionAmbulanceList = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_ambulanceFragment)
     val actionMedicineList = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_medicineListFragment)
     val actionBloodBank = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_admibBloodFragment)
-
-
+    val actionPrescribe = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_prescriptionViewFragment)
+    val actionAppoint = Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_appointmentFragment)
 
 
     @Inject

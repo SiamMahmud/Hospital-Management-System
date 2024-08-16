@@ -10,7 +10,7 @@ import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.presentation.model.DoctorInfo
 import com.example.hospitalmanagement.presentation.model.MedicineInfo
 
-class AdminViewMedicineListAdapter (private val medicineList: ArrayList<MedicineInfo>) :
+class AdminViewMedicineListAdapter (private var medicineList: ArrayList<MedicineInfo>) :
     RecyclerView.Adapter<AdminViewMedicineListAdapter.MyViewHolder>(){
     var onItemClick: ((MedicineInfo) -> Unit)? = null
 
@@ -21,17 +21,32 @@ class AdminViewMedicineListAdapter (private val medicineList: ArrayList<Medicine
     override fun getItemCount(): Int {
        return medicineList.size
     }
+    fun searchDataList(searchList: List<MedicineInfo>) {
+        medicineList = ArrayList(searchList)  
+        notifyDataSetChanged()
+    }
+    
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = medicineList[position]
-        holder.mName.text = currentItem.mediName
-        holder.mPrice.text = currentItem.mediPrice
+        holder.bind(currentItem)
         holder.mCard.setOnClickListener {
             onItemClick?.invoke(currentItem)
         }
     }
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val mName = itemView.findViewById<TextView>(R.id.medicineNameTv)
-        val mPrice = itemView.findViewById<TextView>(R.id.mPriceTv)
-        val mCard = itemView.findViewById<CardView>(R.id.medicineCardLayout)
+        val mName: TextView
+        val mPrice: TextView
+        val mCard: CardView
+
+        init {
+            mName = itemView.findViewById(R.id.medicineNameTv)
+            mPrice = itemView.findViewById(R.id.mPriceTv)
+            mCard = itemView.findViewById(R.id.medicineCardLayout)
+        }
+
+        fun bind(medicine: MedicineInfo) {
+            mName.text = medicine.name
+            mPrice.text = medicine.price
+        }
     }
 }

@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <data>
         <variable
             name="model"
-            type="com.example.hospitalmanagement.presentation.dashboard.AmbulanceDetailsFragment" />
+            type="com.example.hospitalmanagement.presentation.dashboard.PrescriptionDetailsFragment"/>
     </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,12 +37,13 @@
             android:layout_marginRight="@dimen/margin_15"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/backIv">
+
             <TextView
                 android:id="@+id/titleTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="@string/ambulance_details"
+                android:text="@string/prescribe"
                 android:textColor="@color/page_title_text_color"
                 android:textSize="@dimen/title_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -60,27 +61,29 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/titleTv">
+
                 <TextView
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/driver_name"
+                    android:text="@string/patient_name"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
-                    android:id="@+id/ambulanceDetailNameTv"
+                    android:id="@+id/pNameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_5"
-                    android:hint="@string/driver_name_tv"
+                    android:hint="@string/group_name"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/name"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,17 +92,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_5"
                 android:layout_marginTop="@dimen/margin_5"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/container1">
-
                 <TextView
-                    android:id="@+id/aLocation"
+                    android:id="@+id/dName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ambulance_location"
+                    android:text="@string/doctor_nameTv"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -107,17 +109,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/aLocationEt"
+                    android:id="@+id/dNameEt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_5"
-                    android:hint="@string/ambulance_locationTv"
+                    android:hint="@string/mNameN"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/aLocation"
+                    app:layout_constraintLeft_toRightOf="@id/dName"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -126,16 +127,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_5"
                 android:layout_marginTop="@dimen/margin_5"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/container2">
                 <TextView
-                    android:id="@+id/aPlateN"
+                    android:id="@+id/dPresTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ambulance_licence_number"
+                    android:text="@string/prescribe"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -143,56 +144,20 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/aPlateEt"
+                    android:id="@+id/dPresTitleEt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_5"
-                    android:hint="@string/ambulance_licence_number_tv"
+                    android:hint="@string/mNameN"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/aPlateN"
+                    app:layout_constraintLeft_toRightOf="@id/dPresTitle"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/container4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_5"
-                android:layout_marginTop="@dimen/margin_5"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/container3">
-                <TextView
-                    android:id="@+id/aPhoneNumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/phone_number"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/aPhoneNumberEt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_5"
-                    android:hint="@string/phone_number_tx"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/aPhoneNumber"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <Button
-                android:id="@+id/aBtnDelete"
+                android:id="@+id/pBtnDelete"
                 style="@style/Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -209,8 +174,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/container3"
                 app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
 </layout>

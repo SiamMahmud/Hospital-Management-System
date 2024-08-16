@@ -1,12 +1,13 @@
 package com.example.hospitalmanagement.presentation.model
 
 data class MedicineInfo(
-    var mediName : String = "",
-    var mediPrice : String = "",
-    var mediCompany : String = "",
-    var mediDetails : String = "",
-    var mediExpireDate : String = "",
-    var mediSelf : String = "",
-    var mediRow : String = "",
-    var mediCol : String = ""
+    var medicineId:String? = null,
+    var name:String? = null,
+    var company:String? = null,
+    var details:String? = null,
+    var price:String? = null,
+    var date:String? = null,
+    var self:String? = null,
+    var row:String? = null,
+    var column:String? = null
 )

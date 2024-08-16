@@ -8,26 +8,23 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.hospitalmanagement.R
-import com.example.hospitalmanagement.databinding.FragmentAdminBloodBankDetailsBinding
+import com.example.hospitalmanagement.databinding.FragmentPrescriptionDetailsBinding
 
-
-class AdminBloodBankDetailsFragment : Fragment() {
-    private lateinit var binding: FragmentAdminBloodBankDetailsBinding
+class PrescriptionDetailsFragment : Fragment() {
+    private lateinit var binding : FragmentPrescriptionDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_admin_blood_bank_details, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_prescription_details, container, false)
         binding.model = this
         binding.backIv.setOnClickListener {
             findNavController().popBackStack()
         }
-        binding.donorN.text = requireArguments().getString("donorName")
-        binding.aGroupTypeEt.text = requireArguments().getString("bloodGroupType")
-        binding.donorPhnNumEt.text = requireArguments().getString("donorPhoneNumber")
+        binding.pNameTv.text = requireArguments().getString("pPatientName")
+        binding.dNameEt.text = requireArguments().getString("pDocName")
 
         return binding.root
     }
-
 }
