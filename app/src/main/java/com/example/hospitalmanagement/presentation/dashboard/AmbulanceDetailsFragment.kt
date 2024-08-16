@@ -25,6 +25,9 @@ class AmbulanceDetailsFragment : Fragment() {
         }
         binding.ambulanceDetailNameTv.text = requireArguments().getString("driverName")
         binding.aLocationEt.text = requireArguments().getString("ambulLocation")
+        binding.aPlateEt.text = requireArguments().getString("licenceNumber")
+        binding.aPhoneNumberEt.text = requireArguments().getString("phoneNumber")
+
         return binding.root
     }
 

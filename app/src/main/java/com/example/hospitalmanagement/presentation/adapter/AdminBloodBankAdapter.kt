@@ -8,8 +8,9 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hospitalmanagement.R
 import com.example.hospitalmanagement.presentation.model.BloodBankDetails
+import com.example.hospitalmanagement.presentation.model.DoctorInfo
 
-class AdminBloodBankAdapter(private val bloodBankList: ArrayList<BloodBankDetails>) :
+class AdminBloodBankAdapter(private var bloodBankList: ArrayList<BloodBankDetails>) :
     RecyclerView.Adapter<AdminBloodBankAdapter.MyViewHolder>() {
     var onItemClick: ((BloodBankDetails) -> Unit)? = null
 
@@ -21,6 +22,10 @@ class AdminBloodBankAdapter(private val bloodBankList: ArrayList<BloodBankDetail
 
     override fun getItemCount(): Int {
         return bloodBankList.size
+    }
+    fun searchDataList(searchList:List<BloodBankDetails>){
+        bloodBankList = searchList as ArrayList<BloodBankDetails>
+        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
